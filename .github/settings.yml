@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Install and configure daemonize on your systems.
+  homepage: https://buluma.github.io/
+  topics: daemonize, system, ansible, molecule, tox, playbook, hacktoberfest
