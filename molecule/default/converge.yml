@@ -1,7 +1,8 @@
 ---
 - name: Converge
   hosts: all
-  tasks:
-    - name: "Include buluma.daemonize"
-      ansible.builtin.include_role:
-        name: "buluma.daemonize"
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: ansible-role-daemonize
