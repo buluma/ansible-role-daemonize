@@ -74,7 +74,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|fedora|all|
+|fedora|34,35|
 |ubuntu|all|
 |el|all|
 |debian|all|
