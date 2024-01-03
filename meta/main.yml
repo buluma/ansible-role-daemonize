@@ -10,8 +10,7 @@ galaxy_info:
   platforms:
     - name: Fedora
       versions:
-        - "34"
-        - "35"
+        - all
     - name: Ubuntu
       versions:
         - all
