@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-daemonize/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-daemonize/compare/0.1.2...HEAD)
+
+**Merged pull requests:**
+
+- Bump actions/checkout from 3 to 4 [\#6](https://github.com/buluma/ansible-role-daemonize/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [0.1.2](https://github.com/buluma/ansible-role-daemonize/tree/0.1.2) (2023-12-24)
 
 [Full Changelog](https://github.com/buluma/ansible-role-daemonize/compare/0.1.1...0.1.2)
