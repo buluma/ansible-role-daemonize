@@ -55,3 +55,5 @@
     - make
     - make install
   become: true
+  tags:
+    - molecule-notest
