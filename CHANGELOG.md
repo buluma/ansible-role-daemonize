@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.5 to 1.0.8 [\#7](https://github.com/buluma/ansible-role-daemonize/pull/7) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump actions/checkout from 3 to 4 [\#6](https://github.com/buluma/ansible-role-daemonize/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [0.1.2](https://github.com/buluma/ansible-role-daemonize/tree/0.1.2) (2023-12-24)
