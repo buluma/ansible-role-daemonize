@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-daemonize/tree/HEAD)
+## [0.2.0](https://github.com/buluma/ansible-role-daemonize/tree/0.2.0) (2024-01-04)
 
-[Full Changelog](https://github.com/buluma/ansible-role-daemonize/compare/0.1.2...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-daemonize/compare/0.1.2...0.2.0)
 
 **Merged pull requests:**
 
