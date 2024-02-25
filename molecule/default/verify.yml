@@ -18,5 +18,5 @@
     failed_when: false
     register: daemonize_version_installed
 
-  - name: degug version
-    msg: daemonize_version_installed
+  # - name: degug version
+  #   msg: daemonize_version_installed
