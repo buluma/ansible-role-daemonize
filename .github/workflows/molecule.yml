@@ -67,8 +67,6 @@ jobs:
             tag: "latest"
           - image: "debian-systemd"
             tag: "bullseye"
-          - image: "docker-opensuse-systemd"
-            tag: "latest"
     steps:
       - name: Checkout Role
         uses: actions/checkout@v4
