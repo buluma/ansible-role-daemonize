@@ -1,28 +1,33 @@
 ---
 # tasks file for daemonize
-
-# pretasks
-- name: Ensure build dependencies are installed (RedHat).
-  ansible.builtin.yum: 'name="{{ item }}" state=present'
-  with_items:
-    - "@Development tools"
-    - tar
-    - unzip
-  when: ansible_os_family == 'RedHat'
-
 - name: Update apt cache.
   ansible.builtin.apt: update_cache=yes cache_valid_time=600
   when: ansible_os_family == 'Debian'
   changed_when: false
 
-- name: Ensure build dependencies are installed (Debian).
-  ansible.builtin.apt: 'name="{{ item }}" state=present'
-  with_items:
-    - build-essential
-    - unzip
-    - tar
-    - sudo
-  when: ansible_os_family == 'Debian'
+- name: Install daemonize packages
+  ansible.builtin.package:
+    name: "{{ daemonize_packages }}"
+    state: present
+
+# pretasks
+# - name: Ensure build dependencies are installed (RedHat).
+#   ansible.builtin.yum: 'name="{{ item }}" state=present'
+#   with_items:
+#     - "@Development tools"
+#     - tar
+#     - unzip
+#   when: ansible_os_family == 'RedHat'
+#
+#
+# - name: Ensure build dependencies are installed (Debian).
+#   ansible.builtin.apt: 'name="{{ item }}" state=present'
+#   with_items:
+#     - build-essential
+#     - unzip
+#     - tar
+#     - sudo
+#   when: ansible_os_family == 'Debian'
 
 - name: Download daemonize archive.
   ansible.builtin.get_url:
