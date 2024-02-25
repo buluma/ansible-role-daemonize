@@ -21,9 +21,6 @@ galaxy_info:
     - name: Debian
       versions:
         - all
-    - name: opensuse
-      versions:
-        - all
 
   galaxy_tags:
     - daemonize
