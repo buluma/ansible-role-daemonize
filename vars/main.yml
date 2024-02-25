@@ -15,10 +15,7 @@ _daemonize_packages:
     - unzip
   # Rocky: *centos_packages
   Suse:
-    - bison
-    - gcc
-    - libelf-devel
-    - make
-    - perl-Digest-SHA1
+    - tar
+    - unzip
 
 daemonize_packages: "{{ _daemonize_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_daemonize_packages[ansible_distribution] | default(_daemonize_packages[ansible_os_family] | default (_daemonize_packages['default'] ))) }}"
