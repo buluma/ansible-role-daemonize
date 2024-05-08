@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/buluma/ansible-role-daemonize/tree/HEAD)
 
-[Full Changelog](https://github.com/buluma/ansible-role-daemonize/compare/0.3.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-daemonize/compare/24.3.31...HEAD)
+
+**Merged pull requests:**
+
+- Bump dependabot/fetch-metadata from 1 to 2 [\#18](https://github.com/buluma/ansible-role-daemonize/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [24.3.31](https://github.com/buluma/ansible-role-daemonize/tree/24.3.31) (2024-03-25)
+
+[Full Changelog](https://github.com/buluma/ansible-role-daemonize/compare/0.3.0...24.3.31)
 
 **Merged pull requests:**
 
