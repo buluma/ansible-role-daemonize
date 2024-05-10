@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump buluma/dependabot-auto-merge-action from 2.1.2 to 2.1.3 [\#19](https://github.com/buluma/ansible-role-daemonize/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump dependabot/fetch-metadata from 1 to 2 [\#18](https://github.com/buluma/ansible-role-daemonize/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [24.3.31](https://github.com/buluma/ansible-role-daemonize/tree/24.3.31) (2024-03-25)
