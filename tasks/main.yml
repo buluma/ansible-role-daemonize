@@ -62,5 +62,6 @@
     - make
     - make install
   become: true
+  changed_when: false
   tags:
     - molecule-notest
