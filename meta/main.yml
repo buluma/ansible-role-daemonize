@@ -12,6 +12,7 @@ galaxy_info:
       versions:
         - "39"
         - "38"
+        - "40"
     - name: Ubuntu
       versions:
         - all

@@ -47,7 +47,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 workspace: /root
 
-daemonize_version: 1.7.7
+daemonize_version: "1.7.7"
 daemonize_install_path: "/usr"
 ```
 
@@ -78,10 +78,10 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|39, 38|
-|[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
-|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|all|
-|[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
+|[Fedora](https://hub.docker.com/r/buluma/fedora)|39, 38, 40|
+|[Ubuntu](https://hub.docker.com/r/buluma/ubuntu)|all|
+|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|all|
+|[Debian](https://hub.docker.com/r/buluma/debian)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done to:
 

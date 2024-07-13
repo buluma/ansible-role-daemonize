@@ -12,7 +12,6 @@ on:
       - main
       - testing
       - dependabot/**
-      - renovate/**
     paths-ignore:
       - '**/README.md'
       - '**/CHANGELOG.md'
@@ -21,10 +20,8 @@ on:
   pull_request:
   pull_request_target:
   schedule:
-    # - cron: '7 4 4 * *'
-    - cron: '7 4 * * *'
+    - cron: '7 4 4/4 * *'
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions: write-all
@@ -42,30 +39,36 @@ jobs:
       - name: ansible-lint
         uses: ansible-community/ansible-lint-action@main
   test:
-    runs-on: ubuntu-20.04
+    needs:
+      - lint
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
         config:
-          - image: "fedora-systemd"
-            tag: "latest"
-          - image: "fedora-systemd"
-            tag: "38"
-          - image: "docker-ubuntu-systemd"
-            tag: "latest"
-          - image: "docker-ubuntu-systemd"
+          - image: "docker-molecule-images"
+            tag: "fedora39"
+          - image: "docker-molecule-images"
+            tag: "fedora38"
+          - image: "docker-molecule-images"
+            tag: "fedora40"
+          - image: "docker-molecule-images"
+            tag: "ubuntu_latest"
+          - image: "docker-molecule-images"
             tag: "focal"
-          - image: "docker-ubuntu-systemd"
-            tag: "bionic"
-          - image: "enterpriselinux"
-            tag: "7"
+          - image: "docker-molecule-images"
+            tag: "jammy"
+          - image: "docker-molecule-images"
+            tag: "lunar"
+          - image: "docker-molecule-images"
+            tag: "noble"
           - image: "enterpriselinux"
             tag: "8"
           - image: "enterpriselinux"
             tag: "latest"
-          - image: "debian-systemd"
-            tag: "latest"
-          - image: "debian-systemd"
+          - image: "docker-molecule-images"
+            tag: "buster"
+          - image: "docker-molecule-images"
             tag: "bullseye"
     steps:
       - name: Checkout Role
@@ -77,12 +80,14 @@ jobs:
         with:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
+      - name: Running Role Test
+        run: ansible-galaxy role import --api-key ${{ secrets.galaxy_api_key }} buluma ${{ github.event.repository.name }}
 
   dependabot:
     needs:
       - lint
       - test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'buluma' && github.event_name == 'pull_request'}}
     steps:
       - uses: "actions/checkout@master"
