@@ -8,6 +8,7 @@
       changed_when: false
       failed_when: false
       register: daemonize_installed
+
     - name: Check daemonize version installed.
       ansible.builtin.command: daemonize -v
       changed_when: false
