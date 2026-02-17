@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: buluma
   role_name: daemonize
@@ -6,9 +7,9 @@ galaxy_info:
   license: Apache-2.0
   min_ansible_version: '2.12'
   platforms:
-  - name: Fedora
-    versions:
-    - all
+    - name: Fedora
+      versions:
+        - all
   - name: Ubuntu
     versions:
     - all
@@ -19,6 +20,6 @@ galaxy_info:
     versions:
     - all
   galaxy_tags:
-  - daemonize
+    - daemonize
   - system
 dependencies: []
