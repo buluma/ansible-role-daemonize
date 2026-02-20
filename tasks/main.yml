@@ -35,7 +35,7 @@
   ansible.builtin.get_url:
     url: "https://github.com/bmc/daemonize/archive/release-{{ daemonize_version }}.tar.gz"
     dest: "{{ workspace }}/daemonize-{{ daemonize_version }}.tar.gz"
-    mode: 0644
+    mode: "0644"
 
 - name: Expand daemonize archive.
   ansible.builtin.unarchive:
@@ -43,7 +43,7 @@
     dest: "{{ workspace }}"
     creates: "{{ workspace }}/daemonize-release-{{ daemonize_version }}/INSTALL"
     copy: false
-    mode: 0755
+    mode: "0755"
 
 - name: Check if daemonize is installed.
   ansible.builtin.command: which daemonize
@@ -52,9 +52,9 @@
   register: daemonize_installed
 
 - name: Build daemonize.
-  ansible.builtin.command: >
-    {{ item }}
-    chdir={{ workspace }}/daemonize-release-{{ daemonize_version }}
+  ansible.builtin.command:
+    chdir: "{{"
+    cmd: "{{ item }} workspace }}/daemonize-release-{{ daemonize_version }}"
   when: daemonize_installed.rc != 0
   ignore_errors: "{{ ansible_check_mode }}"
   with_items:
