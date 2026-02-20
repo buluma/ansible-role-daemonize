@@ -53,8 +53,8 @@
 
 - name: Build daemonize.
   ansible.builtin.command:
-    chdir: "{{"
-    cmd: "{{ item }} workspace }}/daemonize-release-{{ daemonize_version }}"
+    chdir: "{{ workspace }}/daemonize-release-{{ daemonize_version }}"
+    cmd: "{{ item }}"
   when: daemonize_installed.rc != 0
   ignore_errors: "{{ ansible_check_mode }}"
   with_items:
