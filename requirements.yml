@@ -1,4 +1,4 @@
 ---
 roles:
-  - name: buluma.bootstrap
-  - name: buluma.ca_certificates
+- name: buluma.bootstrap
+- name: buluma.ca_certificates
