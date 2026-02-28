@@ -3,14 +3,14 @@
   hosts: all
   gather_facts: false
   tasks:
-    - name: Check if daemonize is installed.
-      ansible.builtin.command: which daemonize
-      changed_when: false
-      failed_when: false
-      register: daemonize_installed
+  - name: Check if daemonize is installed.
+    ansible.builtin.command: which daemonize
+    changed_when: false
+    failed_when: false
+    register: daemonize_installed
 
-    - name: Check daemonize version installed.
-      ansible.builtin.command: daemonize -v
-      changed_when: false
-      failed_when: false
-      register: daemonize_version_installed
+  - name: Check daemonize version installed.
+    ansible.builtin.command: daemonize -v
+    changed_when: false
+    failed_when: false
+    register: daemonize_version_installed

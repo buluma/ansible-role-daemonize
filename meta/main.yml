@@ -5,14 +5,11 @@ galaxy_info:
   description: Install and configure daemonize on your systems.
   company: ShadowNet
   license: Apache-2.0
-
   min_ansible_version: "2.12"
   platforms:
     - name: Fedora
       versions:
-        - "39"
-        - "38"
-        - "40"
+        - all
     - name: Ubuntu
       versions:
         - all
@@ -22,9 +19,7 @@ galaxy_info:
     - name: Debian
       versions:
         - all
-
   galaxy_tags:
     - daemonize
     - system
-
 dependencies: []
