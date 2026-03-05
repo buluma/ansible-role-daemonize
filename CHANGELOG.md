@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump ansible/ansible-lint from 24.7.0 to 24.9.0 [\#23](https://github.com/buluma/ansible-role-daemonize/pull/23) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/dependabot-auto-merge-action from 2.1.2 to 2.1.4 [\#22](https://github.com/buluma/ansible-role-daemonize/pull/22) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/molecule-action from 24.2.0 to 24.6.17 [\#21](https://github.com/buluma/ansible-role-daemonize/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/dependabot-auto-merge-action from 2.1.3 to 2.1.4 [\#20](https://github.com/buluma/ansible-role-daemonize/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
