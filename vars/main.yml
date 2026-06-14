@@ -10,7 +10,8 @@ _daemonize_packages:
     - tar
     - sudo
   RedHat:
-    - "@Development tools"
+    - gcc
+    - make
     - tar
     - unzip
   # Rocky: *centos_packages
