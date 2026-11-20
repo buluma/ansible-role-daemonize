@@ -76,7 +76,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 workspace: /root
 
-daemonize_version: "1.7.7"
+daemonize_version: "1.7.8"
 daemonize_install_path: "/usr"
 ```
 
